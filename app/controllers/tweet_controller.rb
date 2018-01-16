@@ -37,7 +37,8 @@ class TweetController < ApplicationController
   end
 
   get '/tweets/:id/edit' do
-    #@tweet = Tweet.find(params[:id])
+    binding.pry
+    @tweet = Tweet.find(params[:id])
     #if !Helpers.logged_in?(session)
       redirect to '/login'
     #elsif Helpers.current_user(session).id == @tweet.user_id
