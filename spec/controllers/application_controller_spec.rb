@@ -371,6 +371,7 @@ describe ApplicationController do
     context "logged out" do
       it 'does not load let user view tweet edit form if not logged in' do
         get '/tweets/1/edit'
+        binding.pry
         expect(last_response.location).to include("/login")
       end
     end
